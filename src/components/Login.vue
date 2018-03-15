@@ -23,7 +23,7 @@
       signIn: function() {
         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
           (user) => {
-            alert("Muito bem! Você está conectado!")
+            this.$router.replace('hello')
           },
           (err) => {
             alert("Ocorreu um erro " + err.message)
