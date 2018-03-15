@@ -3,7 +3,7 @@
     <p>Vamos criar uma conta!</p>
     <input type="text" v-model="email" placeholder="Email"><br />
     <input type="password" v-model="password" placeholder="Senha"><br />
-    <button>Criar Conta</button>
+    <button v-on:click="signUp">Criar Conta</button>
     <span>ou volte para o <router-link to="/login">login</router-link>.</span>
   </div>
 </template>
@@ -29,6 +29,7 @@
             alert('Oops. ' + err.message)
           }
         );
+      }
     }
   }
 </script>
